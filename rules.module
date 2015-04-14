@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Allows site administrators to modify configuration.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rules_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.rules':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Rules documentation is kept online. Please use the links below for more information about Rules. Feel free to contribute to improving the online documentation!') . '</p>';
+
+    // Build a list of essential Rules help pages, formatted as a bullet list.
+    $output .= '<p>' . t('Rules introduction' ) . ' ' . '<a href="http://drupal.org/node/298480">http://drupal.org/node/298480</a>' . '<p>';
+    $output .= '<p>' . t('Rules terminology' ) . ' ' . '<a href="http://drupal.org/node/1299990">http://drupal.org/node/1299990</a>' . '<p>';
+    $output .= '<p>' . t('Rules Scheduler' ) . ' ' . '<a href="http://drupal.org/node/1300068">http://drupal.org/node/1300068</a>' . '<p>';
+    $output .= '<p>' . t('Coding for Rules' ) . ' ' . '<a href="http://drupal.org/node/878720">http://drupal.org/node/878720</a>' . '<p>';
+    $output .= '<p>' . t('Condition Components' ) . ' ' . '<a href="http://drupal.org/node/1300034">http://drupal.org/node/1300034</a>' . '<p>';
+    $output .= '<p>' . t('Data Selection' ) . ' ' . '<a href="http://drupal.org/node/1300042">http://drupal.org/node/1300042</a>' . '<p>';
+    $output .= '<p>' . t('Chained Tokens' ) . ' ' . '<a href="http://drupal.org/node/1300042">http://drupal.org/node/1300042</a>' . '<p>';
+    $output .= '<p>' . t('Loops' ) . ' ' . '<a href="http://drupal.org/node/1300058">http://drupal.org/node/1300058</a>' . '<p>';
+    $output .= '<p>' . t('Components' ) . ' ' . '<a href="http://drupal.org/node/1300024">http://drupal.org/node/1300024</a>' . '<p>';
+    $output .= '<p>' . t('Component Types' ) . ' ' . '<a href="http://drupal.org/node/1300024">http://drupal.org/node/1300024</a>' . '<p>';
+    $output .= '<p>' . t('Variables' ) . ' ' . '<a href="http://drupal.org/node/1300024">http://drupal.org/node/1300024</a>' . '<p>';
+
+      return $output;
+  }
+}
