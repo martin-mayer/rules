@@ -18,8 +18,9 @@ function rules_help($route_name, RouteMatchInterface $route_match) {
       $output .= '<p>' . t('Rules documentation is kept online. Please use the links below for more information about Rules. Feel free to contribute to improving the online documentation! For more information, see the <a href="!action" target="_blank">online documentation for the Rules module.</a>',
               array('!action' => 'https://www.drupal.org/project/rules')) . '</p>';
 
-      $output .= '<h3>' . t('Uses') . '</h3>';
-      $output .= '<dl><dt>Rules introduction</dt>';
+      $output .= '<h3>' . t('Documentation for Drupal 7') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>Rules introduction</dt>';
       $output .= '<dd>' . t('To learn what Rules is all about read the <a href="!action" target="_blank">Rules introduction</a>.', array('!action' => 'http://drupal.org/node/298480')) . '</dd>';
       $output .= '<dt>Site building</dt>';
       $output .= '<dd>' . t('Look at the <a href="!action" target="_blank">site building</a> documentation to learn how to configure Rules.', array('!action' => 'http://drupal.org/node/1299990')) . '</dd>';
@@ -35,6 +36,14 @@ function rules_help($route_name, RouteMatchInterface $route_match) {
       $output .= '<dd>' . t('<a href="!action" target="_blank">Loops</a> allow performing actions on each of the items included in a list, for example to send e-mail to all users in a multiple-value user reference field, or unpublish all comments belonging to a certain node.', array('!action' => 'http://drupal.org/node/1300058')) . '</dd>';
       $output .= '<dt>Components</dt>';
       $output .= '<dd>' . t('<a href="!action" target="_blank">Components</a> are stand-alone Rules configurations that can be called from reaction rules, other modules and programmatically from custom code. Learn about component types, variables when creating components and executing components manually.', array('!action' => 'http://drupal.org/node/1300024')) . '</dd>';
+      $output .= '</dl>';
+
+      $output .= '<h3>' . t('Documentation for Drupal 8') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>Rules documentation</dt>';
+      $output .= '<dd>' . t('Find current <a href="!action" target="_blank">Rules documentation</a> for Drupal 8 on Gitbooks.', array('!action' => 'http://thefubhy.gitbooks.io/rules/content/')) . '</dd>';
+      $output .= '<dt>Rules development on Github</dt>';
+      $output .= '<dd>' . t('The newest source code is available on <a href="!action" target="_blank">Github</a>.', array('!action' => 'https://github.com/fago/rules')) . '</dd>';
       $output .= '</dl>';
       return $output;
   }
